@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { FiBriefcase, FiFolder, FiCode, FiCheckCircle } from "react-icons/fi";
 
 const cards = [
-  { icon: <FiBriefcase />, title: "Experience", desc: "1+ years building web apps" },
+  { icon: <FiBriefcase />, title: "Experience", desc: "3+ years building web apps" },
   { icon: <FiFolder />, title: "Projects Completed", desc: "20+ delivered projects" },
   { icon: <FiCode />, title: "Technologies", desc: "10+ tools mastered" },
   { icon: <FiCheckCircle />, title: "Availability", desc: "Open to new opportunities" },
