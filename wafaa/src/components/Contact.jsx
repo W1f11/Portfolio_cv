@@ -54,23 +54,20 @@ export default function Contact() {
   const form = useRef(null);
   const [status, setStatus] = useState("idle");
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    setStatus("sending");
-
-    const sendEmail = async (e) => {
+  const sendEmail = async (e) => {
   e.preventDefault();
 
   setStatus("sending");
 
   try {
-    await emailjs.sendForm(
+    const result = await emailjs.sendForm(
       "service_4e8jvhd",
       "template_ny5d58k",
       form.current,
       "UFMRgh1W0xxnEJQNy"
     );
+
+    console.log(result);
 
     setStatus("sent");
     form.current.reset();
@@ -78,12 +75,12 @@ export default function Contact() {
     setTimeout(() => {
       setStatus("idle");
     }, 3000);
+
   } catch (error) {
     console.error("EmailJS Error:", error);
     setStatus("error");
   }
 };
-  };
 
   return (
     <section id="contact">
